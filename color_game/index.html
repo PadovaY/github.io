@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Guess that Color</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+</head>
+
+<body onload="init()">
+
+    <div class="head">
+        <div class="game-type">
+            <button type="button" class="btn btn-success type choosen " onclick="setType(this)" disabled>Classic</button>
+            <button type="button" class="btn btn-danger type" onclick="setType(this), timer()">Arcade</button>
+        </div>
+        <h1>Can you guess what is <br>
+            <span class="pickedC"></span>
+        </h1>
+        <div class="bar">
+            <button class="newbtn" onclick="reset()">NEW COLORS</button>
+            <span class="message"></span>
+            <button class="diffbtn" value="easy" onclick="setDiffuculty(this)">EASY</button>
+            <button class="diffbtn selected" value="hard" onclick="setDiffuculty(this)">HARD</button>
+        </div>
+    </div>
+
+    <div class="arcade-timer">
+        <h3> TIMER:</h3>
+        <h3 class="time-display"></h3>
+        <h3>SCORE:</h3>
+        <h3 class="score-display">0</h3>
+        <h3>BEST:</h3>
+        <h3 class="record-display"></h3>
+    </div>
+    <div class="container">
+        <div class="square-container"> </div>
+        <h2 class='game-over'> GAME OVER</h2>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
